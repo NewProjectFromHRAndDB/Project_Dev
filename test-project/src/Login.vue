@@ -10,7 +10,7 @@
             <p><h4>用户名：</h4></p>
             <p><input type="text" class="inputstyle" v-model="username"></p>
             <p><h4>密码：</h4></p>
-            <p><input type="password" class="inputstyle" v-model="psw"></p>
+            <p><input type="password" class="inputstyle" v-model="psw" v-on:keyup.enter="login()"></p>
             <p><h4>验证码：</h4></p>
             <p><img v-bind:src="src"  width="90" height="30">
             <input type="password" v-model="yzm"></p>

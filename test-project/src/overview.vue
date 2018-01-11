@@ -2,11 +2,11 @@
   <el-container>
       <el-header>
       </el-header>
-      <el-main style="height: 370px;">
-          <div style="margin:50px 150px;background:#333">
+      <el-main style="height: 370px;text-align:center">
+          <div style="width:800px;margin:50px auto;background:#333">
                 <div style="height: 100px;">
                     <el-row :gutter="20">
-                        <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
+                        <el-col :span="8"><div class="grid-content bg-purple" @click="userList()">用户管理</div></el-col>
                         <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
                         <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
                     </el-row>
@@ -36,6 +36,11 @@
 export default {
   date() {
     return {};
+  },
+  methods: {
+      userList: function(){
+          this.$router.push({ path: "/user/user-list" });
+      }
   }
 };
 </script>
