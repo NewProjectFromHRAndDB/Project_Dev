@@ -3,7 +3,7 @@
     <div class="header">
       <h1>{{title}}</h1>
     </div>
-    <div class="content" style="background-image:url('../static/img/login.png');">
+    <div class="content" style="background-image:url('../static/img/login.png');background-size:cover">
       <div class="content_wrapper">
         <div class="login_container">
           <form id="loginform" autocomplete="off" name="loginform" style="margin:0px">
@@ -70,7 +70,7 @@ export default {
           this.users[i].password === this.psw
         ) {
           flag = true;
-          this.$router.push({ path: "helloworld" });
+          this.$router.push({ path: "overview" });
           break;
         }
       }
